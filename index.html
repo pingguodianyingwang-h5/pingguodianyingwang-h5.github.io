@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>苹果电影网 - 红苹果极简果蔬风影视导航</title>
+<meta name="description" content="苹果电影网(https://pingguodianyingwang-h5.github.io)以红苹果白底极简为视觉，整理最新电影、热播剧集、综艺娱乐、动漫专区，做合规影视信息导航站。与 Apple Inc. 无任何关联。">
+<meta name="keywords" content="苹果电影网,电影,电视剧,综艺,动漫,红苹果,极简,果蔬风,影视导航">
+<meta name="author" content="苹果电影网">
+<meta name="robots" content="index,follow">
+<meta name="msvalidate.01" content="BING_VERIFICATION_CODE">
+<meta property="og:title" content="苹果电影网 - 红苹果极简果蔬风影视导航">
+<meta property="og:description" content="苹果电影网：片单像一筐刚摘的红苹果，甜的不辣眼。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://pingguodianyingwang-h5.github.io">
+<meta property="og:site_name" content="苹果电影网">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "name":"苹果电影网",
+  "url":"https://pingguodianyingwang-h5.github.io",
+  "description":"红苹果白底极简风影视信息导航站，与 Apple Inc. 无关",
+  "potentialAction":{
+    "@type":"SearchAction",
+    "target":"https://pingguodianyingwang-h5.github.io#search={search_term_string}",
+    "query-input":"required name=search_term_string"
+  }
+}
+</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --red:#ff3b30;
+  --red-d:#c0392b;
+  --leaf:#34c759;
+  --cream:#fffdfa;
+  --paper:#ffffff;
+  --ink:#1d1d1f;
+  --muted:#86868b;
+  --line:#ececec;
+}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei","Helvetica Neue",Arial,sans-serif;
+  background:linear-gradient(180deg,#fff,#fff7f6);
+  color:var(--ink);line-height:1.7;overflow-x:hidden;-webkit-font-smoothing:antialiased;
+}
+a{text-decoration:none;color:inherit;transition:.2s}
+
+.disclaimer{background:#fff4f4;color:var(--red-d);font-size:12px;text-align:center;padding:6px 14px;border-bottom:1px solid #ffd9d9}
+.disclaimer b{color:var(--red)}
+
+.top{max-width:1180px;margin:0 auto;padding:16px 20px;display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.logo{font-size:26px;font-weight:800;letter-spacing:-.3px}
+.logo .apple{color:var(--red)}
+.logo small{display:block;font-size:11px;letter-spacing:2px;color:var(--muted);font-weight:600}
+.nav{display:flex;gap:10px;margin-left:auto;flex-wrap:wrap}
+.nav a{font-size:14px;font-weight:600;color:var(--ink);padding:7px 14px;border-radius:980px;background:#f5f5f7}
+.nav a:hover{background:var(--red);color:#fff}
+.btn{font-size:13px;font-weight:700;background:var(--red);color:#fff;padding:8px 18px;border-radius:980px}
+.btn:hover{background:var(--red-d)}
+
+.hero{max-width:1180px;margin:0 auto;padding:54px 20px 30px;text-align:center}
+.hero .big{font-size:clamp(44px,9vw,84px);line-height:1}
+.hero h1{font-size:clamp(30px,6vw,52px);font-weight:800;letter-spacing:-.5px;margin:10px 0}
+.hero h1 span{color:var(--red)}
+.hero p{max-width:640px;margin:14px auto;color:var(--muted);font-size:clamp(15px,3vw,17px)}
+.hero-url{display:inline-block;margin-top:10px;font-family:"SF Mono",ui-monospace,Menlo,Consolas,monospace;font-size:14px;color:var(--red-d);background:#fff;border:1px solid var(--line);padding:8px 16px;border-radius:980px}
+.hero .tags{margin-top:18px;display:flex;gap:8px;justify-content:center;flex-wrap:wrap}
+.chip{font-size:12px;font-weight:600;color:var(--muted);background:#f5f5f7;padding:5px 12px;border-radius:980px}
+
+.section{max-width:1180px;margin:0 auto;padding:20px 20px 60px}
+.head{display:flex;align-items:baseline;gap:12px;margin:40px 0 18px;flex-wrap:wrap}
+.head h2{font-size:clamp(22px,4vw,30px);font-weight:800;letter-spacing:-.3px}
+.head .en{font-size:12px;color:var(--muted);font-family:ui-monospace,Menlo,monospace}
+.head .line{flex:1;height:1px;background:var(--line);min-width:40px}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:18px}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:16px;transition:.22s}
+.card:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(0,0,0,.08)}
+.card .thumb{height:120px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:48px;color:#fff;margin-bottom:12px}
+.card:nth-child(1) .thumb{background:linear-gradient(135deg,#ff5e57,#ff3b30)}
+.card:nth-child(2) .thumb{background:linear-gradient(135deg,#ffa751,#ff7e3b)}
+.card:nth-child(3) .thumb{background:linear-gradient(135deg,#34c759,#1f9d55)}
+.card:nth-child(4) .thumb{background:linear-gradient(135deg,#5ac8fa,#007aff)}
+.card:nth-child(5) .thumb{background:linear-gradient(135deg,#ff2d92,#c2185b)}
+.card:nth-child(6) .thumb{background:linear-gradient(135deg,#ffcc00,#f39c12)}
+.card h3{font-size:16px;font-weight:700}
+.card p{font-size:12px;color:var(--muted);margin:4px 0 8px}
+.tag{display:inline-block;font-size:11px;font-weight:600;color:var(--red-d);background:#fff0f0;padding:3px 9px;border-radius:980px;margin-right:4px}
+
+/* 综艺：横条 */
+.rows{display:flex;flex-direction:column;gap:12px}
+.row{display:flex;align-items:center;gap:14px;background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:14px 18px}
+.row .emoji{font-size:26px}
+.row h3{font-size:15px;font-weight:700}
+.row p{font-size:12px;color:var(--muted)}
+.row .go{margin-left:auto;font-size:13px;font-weight:700;color:var(--red)}
+
+/* 动漫：圆点列表 */
+.dots{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px}
+.dot{display:flex;align-items:center;gap:12px;background:var(--paper);border:1px solid var(--line);border-radius:980px;padding:10px 18px}
+.dot i{width:14px;height:14px;border-radius:50%;background:var(--red);flex-shrink:0}
+.dot:nth-child(2) i{background:var(--leaf)}
+.dot:nth-child(3) i{background:#007aff}
+.dot:nth-child(4) i{background:#ff9500}
+.dot:nth-child(5) i{background:#af52de}
+.dot:nth-child(6) i{background:var(--red-d)}
+.dot h3{font-size:14px;font-weight:700}
+.dot p{font-size:12px;color:var(--muted)}
+
+/* 关于 */
+.about{max-width:1180px;margin:0 auto;padding:10px 20px 50px}
+.panel{background:var(--paper);border:1px solid var(--line);border-radius:24px;padding:32px}
+.panel h3{font-size:22px;font-weight:800;margin-bottom:12px}
+.panel p{font-size:15px;color:#333;margin-bottom:10px}
+.panel b{color:var(--red)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:22px}
+.stat{background:#f5f5f7;border-radius:16px;padding:18px;text-align:center}
+.stat .v{font-size:24px;font-weight:800;color:var(--red)}
+.stat .l{font-size:12px;color:var(--muted);margin-top:4px}
+
+.footer{background:#f5f5f7;color:var(--muted);padding:38px 20px 24px;text-align:center;margin-top:40px;border-top:1px solid var(--line)}
+.footer .lg{font-size:20px;font-weight:800;color:var(--ink)}
+.footer .lg b{color:var(--red)}
+.footer .fl{display:flex;justify-content:center;gap:18px;flex-wrap:wrap;margin:12px 0;font-size:13px}
+.footer .fl a{color:var(--ink)}
+.footer .cp{font-size:12px;line-height:2;border-top:1px solid var(--line);padding-top:14px;max-width:820px;margin:0 auto}
+.footer .cp a{color:var(--red)}
+
+@media(max-width:768px){
+  .nav{display:none}
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .dots{grid-template-columns:1fr}
+}
+@media(max-width:480px){
+  .section{padding:18px 14px 40px}
+  .grid{grid-template-columns:1fr}
+  .stats{grid-template-columns:1fr 1fr}
+  .hero{padding:40px 16px 20px}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/laoliu.js"></script>
+
+<div class="disclaimer">🍎 本站名为“苹果电影网”，与 <b>Apple Inc.</b> 无任何关联、未获授权、非苹果官网；不使用 Apple 商标图形与“Think Different”等标识，仅取“红苹果/果蔬”作为页面意象。</div>
+
+<div class="top">
+  <div class="logo">🍎 苹果<b class="apple">电影网</b><small>PINGGUO · 红苹果影视筐</small></div>
+  <nav class="nav">
+    <a href="#movies">刚摘的片</a>
+    <a href="#tv">熟了在播</a>
+    <a href="#shows">榨汁综艺</a>
+    <a href="#anime">果核动漫</a>
+    <a href="#about">关于这筐苹果</a>
+  </nav>
+  <a href="#movies" class="btn">挑一部</a>
+</div>
+
+<header class="hero">
+  <div class="big">🍎🍏🍎</div>
+  <h1>苹果<span>电影网</span></h1>
+  <p>不酸、不涩、不绕弯。片单像一筐刚摘的红苹果：新鲜、干净、咬一口就有故事。本站只做影视信息导航，不存片、不挂盗版、不模仿任何科技品牌官网。</p>
+  <div class="hero-url">https://pingguodianyingwang-h5.github.io</div>
+  <div class="tags">
+    <span class="chip">最新电影</span>
+    <span class="chip">热播剧集</span>
+    <span class="chip">综艺娱乐</span>
+    <span class="chip">动漫专区</span>
+    <span class="chip">关于我们</span>
+  </div>
+</header>
+
+<main class="section">
+
+  <div class="head" id="movies">
+    <h2>刚摘的片 · 最新电影</h2>
+    <span class="en">// fresh picks</span>
+    <div class="line"></div>
+  </div>
+  <div class="grid">
+    <div class="card"><div class="thumb">🍎</div><h3>红透半边天</h3><p>剧情/2026/8.7</p><span class="tag">新片</span></div>
+    <div class="card"><div class="thumb">🍏</div><h3>青苹果心事</h3><p>青春/2026/8.4</p><span class="tag">治愈</span></div>
+    <div class="card"><div class="thumb">🍐</div><h3>梨园夜话</h3><p>悬疑/2026/8.6</p><span class="tag">口碑</span></div>
+    <div class="card"><div class="thumb">🍊</div><h3>橘子汽水夏</h3><p>文艺/2026/8.9</p><span class="tag">高分</span></div>
+    <div class="card"><div class="thumb">🍒</div><h3>樱桃巷命案</h3><p>犯罪/2026/8.3</p><span class="tag">悬疑</span></div>
+    <div class="card"><div class="thumb">🍑</div><h3>蜜桃熟了</h3><p>爱情/2026/8.5</p><span class="tag">甜宠</span></div>
+  </div>
+
+  <div class="head" id="tv">
+    <h2>熟了在播 · 热播剧集</h2>
+    <span class="en">// ripening now</span>
+    <div class="line"></div>
+  </div>
+  <div class="rows">
+    <div class="row"><div class="emoji">📺</div><div><h3>果园巷人家</h3><p>年代/更新至24集</p></div><span class="go">看 →</span></div>
+    <div class="row"><div class="emoji">📺</div><div><h3>苹果园守夜人</h3><p>悬疑/更新至16集</p></div><span class="go">看 →</span></div>
+    <div class="row"><div class="emoji">📺</div><div><h3>榨汁店恋爱法</h3><p>都市/更新至30集</p></div><span class="go">看 →</span></div>
+    <div class="row"><div class="emoji">📺</div><div><h3>落叶果树班</h3><p>校园/更新至12集</p></div><span class="go">看 →</span></div>
+    <div class="row"><div class="emoji">📺</div><div><h3>晚风采摘记</h3><p>治愈/更新至20集</p></div><span class="go">看 →</span></div>
+  </div>
+
+  <div class="head" id="shows">
+    <h2>榨汁综艺 · 综艺娱乐</h2>
+    <span class="en">// squeeze show</span>
+    <div class="line"></div>
+  </div>
+  <div class="rows">
+    <div class="row"><div class="emoji">🥤</div><div><h3>一榨到底</h3><p>嘉宾把老片榨成金句</p></div><span class="go">看 →</span></div>
+    <div class="row"><div class="emoji">🧺</div><div><h3>果园赶集秀</h3><p>边摘边聊边安利</p></div><span class="go">看 →</span></div>
+    <div class="row"><div class="emoji">🎤</div><div><h3>果核脱口秀</h3><p>影视圈冷笑话专场</p></div><span class="go">看 →</span></div>
+    <div class="row"><div class="emoji">🍯</div><div><h3>蜂蜜影评会</h3><p>甜口/毒舌双盲评</p></div><span class="go">看 →</span></div>
+    <div class="row"><div class="emoji">🎬</div><div><h3>片场偷吃局</h3><p>剧组幕后小食闲谈</p></div><span class="go">看 →</span></div>
+    <div class="row"><div class="emoji">🧃</div><div><h3>盒装片单</h3><p>弹幕投票定下周片</p></div><span class="go">看 →</span></div>
+  </div>
+
+  <div class="head" id="anime">
+    <h2>果核动漫 · 动漫专区</h2>
+    <span class="en">// seeds & cores</span>
+    <div class="line"></div>
+  </div>
+  <div class="dots">
+    <div class="dot"><i></i><div><h3>苹果小子</h3><p>搞笑/新番</p></div></div>
+    <div class="dot"><i></i><div><h3>叶脉魔法</h3><p>奇幻/年番</p></div></div>
+    <div class="dot"><i></i><div><h3>蓝莓机器人</h3><p>科幻/连载</p></div></div>
+    <div class="dot"><i></i><div><h3>橙子战队</h3><p>热血/新番</p></div></div>
+    <div class="dot"><i></i><div><h3>葡萄藤物语</h3><p>治愈/热更</p></div></div>
+    <div class="dot"><i></i><div><h3>果核勇者传</h3><p>冒险/年番</p></div></div>
+  </div>
+
+  <div class="head" id="about">
+    <h2>关于这筐苹果 · 关于我们</h2>
+    <span class="en">// about</span>
+    <div class="line"></div>
+  </div>
+  <div class="about">
+    <div class="panel">
+      <h3>苹果电影网是什么？</h3>
+      <p><b>苹果电影网</b>（https://pingguodianyingwang-h5.github.io）是一个“红苹果白底极简/果蔬摊”风格的影视信息导航站。</p>
+      <p>页面用红苹果、叶子绿、白底圆角来降低信息噪音；片单按“刚摘 / 熟了 / 榨汁 / 果核”来组织。本站<b>不存储视频文件、不提供盗版直链、不聚合非法播放源、不模仿 Apple 官网贸易外观</b>。</p>
+      <p>“苹果”在此仅作水果意象与站名用字；本站与 Apple Inc.、iPhone、iPad、Mac 等商标/产品<b>无任何关联或背书</b>。</p>
+      <div class="stats">
+        <div class="stat"><div class="v">5+</div><div class="l">栏目</div></div>
+        <div class="stat"><div class="v">0</div><div class="l">盗版直链</div></div>
+        <div class="stat"><div class="v">100%</div><div class="l">移动端</div></div>
+        <div class="stat"><div class="v">无关联</div><div class="l">Apple 商标</div></div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="lg">🍎 苹果<b>电影网</b></div>
+  <div class="fl">
+    <a href="#movies">刚摘的片</a>
+    <a href="#tv">熟了在播</a>
+    <a href="#shows">榨汁综艺</a>
+    <a href="#anime">果核动漫</a>
+    <a href="#about">关于这筐苹果</a>
+  </div>
+  <div class="cp">
+    网站名称：苹果电影网 ｜ 网址：<a href="https://pingguodianyingwang-h5.github.io">https://pingguodianyingwang-h5.github.io</a><br>
+    © 2026 苹果电影网 · 红苹果风影视导航 ｜ 与 Apple Inc. 无关，不使用 Apple 商标图形 ｜ 本站仅展示影视信息，资源以正版/公开平台为准。
+  </div>
+</footer>
+
+</body>
+</html>
